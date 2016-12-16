@@ -1,0 +1,11 @@
+package: my_package
+version: 0.0.1
+description: my description
+author: My Name
+email: my@email.com
+url: http://my-website.com
+install_requires:
+  - six==1.10.0
+  - SQLAlchemy==1.0.15
+console_scripts:
+  deploy: my_package.module:method
