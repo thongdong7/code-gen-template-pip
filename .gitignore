@@ -1,0 +1,5 @@
+/.idea
+/test/python-my-company/my_company
+/test/python-my-company/MANIFEST.in
+/test/python-my-company/setup.py
+/test/python-my-company/template/data/pip.yml
