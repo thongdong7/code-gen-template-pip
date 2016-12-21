@@ -6,31 +6,27 @@ from setuptools import setup, find_packages
 
 setup(
     name='{{package}}',
-    version='{{version}}',
+    version='{{version}}{{version_dev|default('')}}',
     description='{{description}}',
     author='{{author}}',
     author_email='{{email}}',
     url='{{url}}',
     packages=find_packages(exclude=["test*"]),
     install_requires=[
-        ## for p in install_requires:
+        ## for p in install_requires
         '{{p}}',
         ## endfor
     ],
     extras_require={
-        ## if extras_require
-        ## for key, value in extras_require | dictsort
-        '{{key}}': {{value}},
+        ## for key in extras_require:
+        '{{key}}': {{extras_require[key]}},
         ## endfor
-        ## endif
     },
     entry_points={
         'console_scripts': [
-            ## if console_scripts
-            ## for key, value in console_scripts | dictsort
-            '{{key}}={{value}}',
+            ## for key in console_scripts:
+            '{{key}}={{console_scripts[key]}}',
             ## endfor
-            ## endif
         ],
     },
     classifiers=[
