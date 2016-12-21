@@ -18,15 +18,19 @@ setup(
         ## endfor
     ],
     extras_require={
-        ## for key in extras_require:
-        '{{key}}': {{extras_require[key]}},
+        ## if extras_require
+        ## for key, value in extras_require | dictsort
+        '{{key}}': {{value}},
         ## endfor
+        ## endif
     },
     entry_points={
         'console_scripts': [
-            ## for key in console_scripts:
-            '{{key}}={{console_scripts[key]}}',
+            ## if console_scripts
+            ## for key, value in console_scripts | dictsort
+            '{{key}}={{value}}',
             ## endfor
+            ## endif
         ],
     },
     classifiers=[
