@@ -1,1 +1,4 @@
 recursive-include {{package}}/conf *
+## for data_dir in data_dirs|default([])
+recursive-include {{data_dir}} *
+## endfor
